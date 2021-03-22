@@ -1,6 +1,6 @@
 # vod-ms-upgrade-journey-deal-filter
 
-Hi all !! this Repo Contains two APIs functionality to populate lists brand and models of Mobile Devices.
+Hi all !! this Repo Contains two APIs with functionalities to populate lists brand and models of Mobile Devices.
 
 to run use npm start
 
