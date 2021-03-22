@@ -1,7 +1,9 @@
 # vod-ms-upgrade-journey-deal-filter
 
 to run use npm start
+
 to run nodemon dev enviornment run npm run dev  -- opens in Nodemon
+
 Port is local port 8080
 
 urls to be hit:-
