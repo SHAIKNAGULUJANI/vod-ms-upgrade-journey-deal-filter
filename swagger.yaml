@@ -1,0 +1,49 @@
+swagger: "2.0"
+info:
+  version: "1.0.0"
+  title: customerdealfilters
+tags:
+  - name: #TODO:
+schemes:
+  # tip: remove http to make production-grade
+  - http
+  - https
+securityDefinitions:
+  Bearer:
+    type: apiKey
+    in: header
+    name: Authorization
+# format of bodies a client can send (Content-Type)
+consumes:
+  - application/json
+# format of the responses to the client (Accepts)
+produces:
+  - application/json
+paths:
+  /rest/services/tmf-api/productCatalogManagement/v4/category?fields=devicebrandName:
+    get:
+      security:
+      tags:
+        - "Checkout Authentication"
+      operationId: getCustomerMaskedMsisdnForAuthentication
+      consumes:
+        - application/json
+      parameters: 
+      responses:
+        200:
+          description: Success
+          schema:
+            $ref: "#/definitions/MsisdnList"
+        400:
+          description: Missing required input parameter
+        401:
+          description: Not authorized
+        424:
+          description: Upstream call failed with a 500. Response will be identical to upstream failure
+        500:
+          description: Technical error occured, service failure.
+  /swagger:
+    x-swagger-pipe: swagger_raw
+
+# complex objects have schema definitions
+definitions: #TODO:
